@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(180deg, #4f4cb0 0%, #4c4cb0 100%);
+
+    display: flex;
+}
+
+body * {
+    font-family: 'Rubik';
+    letter-spacing: -0.02em;
+}
+
+.calendar {
+    margin: auto;
+    width: 500px;
+    background: #2d2a37;
+    color: #ebebeb;
+    border-radius: 48px;
+
+    box-shadow:
+        0 4px 4px rgba(0, 0, 0, 25%),
+        0 188px 52px rgba(0, 0, 0, 1%),
+        0 120px 48px rgba(0, 0, 0, 4%),
+        0 68px 41px rgba(0, 0, 0, 15%),
+        0 30px 30px rgba(0, 0, 0, 26%),
+        0 8px 17px rgba(0, 0, 0, 29%),
+        inset 0 6px 8px rgba(255, 255, 255, 10%),
+    inset 0 -4px 5px rgba(0, 0, 0, 22%);
+}
+
+.month {
+    display: flex;
+    justify-content: center;
+    padding-top: 54px;
+    padding-bottom: 54px;
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 40%);
+}
+
+.weekdays,
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    place-content: center;
+    padding: 10px auto;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 24px;
+    gap: 12px;
+}
+.numberDay {
+    height: 40px;
+}
