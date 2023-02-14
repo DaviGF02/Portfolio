@@ -101,7 +101,7 @@ button:hover {
     rgba(255,255,255,5%) 100%), #7f45e2;
     transition: 0.3s;
 }
-#backspace {
+#equal {
     grid-column: span 4;
     width: 100%;
 }
