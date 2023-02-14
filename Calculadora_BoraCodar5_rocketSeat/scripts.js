@@ -63,13 +63,8 @@ const showResult = () => {
 }
 document.getElementById('equal').addEventListener('click', showResult);
 
-const cleanDisplay = () => {
-    display.textContent = '';
-}
-document.getElementById('cleanDisplay').addEventListener('click', cleanDisplay);
-
 const cleanCalc = () => {
-    cleanDisplay();
+    display.textContent = '';
     operator = undefined;
     newNumber = true;
     lastNumber = undefined;
