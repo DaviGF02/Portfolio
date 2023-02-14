@@ -3,10 +3,12 @@
 const display = document.getElementById('displayResult');
 const numeros = document.querySelectorAll('[id*=key]');
 const operators = document.querySelectorAll('[id*=operator]');
+const lastCalc = document.getElementById('last-calc');
 
 let newNumber = true;
 let operator;
 let lastNumber;
+let newCalc = false;
 
 const pendingOperator = () => operator !== undefined;
 
@@ -14,23 +16,8 @@ const calculate = () => {
     if (pendingOperator()) {
         const currentNumber = parseFloat(display.textContent.replace(',', '.'));
         newNumber = true;
-        switch (operator) {
-            case '+':
-                updateDisplay(lastNumber + currentNumber);
-                break;
-            case '-':
-                updateDisplay(lastNumber - currentNumber);
-                break;
-            case 'X':
-                updateDisplay(lastNumber * currentNumber);
-                break;
-            case '/':
-                updateDisplay(lastNumber / currentNumber);
-                break;
-            case '%':
-                updateDisplay(lastNumber % currentNumber);
-                break;
-        }
+        const resultCalc = eval(`${lastNumber}${operator}${currentNumber}`);
+        display.textContent = resultCalc;
     }
 }
 
@@ -41,10 +28,19 @@ const updateDisplay = (displayText) => {
     } else {
         display.textContent += displayText.toLocaleString('BR');
     }
+
+    if(newCalc) {
+        lastCalc.textContent = displayText.toLocaleString('BR');
+    } else {
+        lastCalc.textContent += displayText.toLocaleString('BR');
+    }
 }
+
+const lastCalcUpdate = () => newCalc = false;
 
 const insertNumber = (eventAction) => updateDisplay(eventAction.target.textContent);
 numeros.forEach(numero => numero.addEventListener('click', insertNumber));
+numeros.forEach(numero => numero.addEventListener('click', lastCalcUpdate));
 
 const selectOperator = (eventAction) => {
     if (!newNumber) {
@@ -53,12 +49,17 @@ const selectOperator = (eventAction) => {
         operator = eventAction.target.textContent;
         lastNumber = parseFloat(display.textContent.replace(',', '.'));
     }
+    lastCalc.textContent = `${lastNumber} ${operator} `;
 }
 operators.forEach(numeros => numeros.addEventListener('click', selectOperator));
 
 const showResult = () => {
     calculate();
     operator = undefined;
+    if (!newCalc) {
+        lastCalc.textContent = `${lastCalc.textContent} = ${display.textContent}`;
+    }
+    newCalc = true;
 }
 document.getElementById('equal').addEventListener('click', showResult);
 
@@ -72,11 +73,13 @@ const cleanCalc = () => {
     operator = undefined;
     newNumber = true;
     lastNumber = undefined;
+    newCalc = true;
 }
 document.getElementById('cleanCalc').addEventListener('click', cleanCalc);
 
 const removeLastNumber = () => {
     display.textContent = display.textContent.slice(0, -1);
+    lastCalc.textContent = lastCalc.textContent.slice(0, -1);
 }
 document.getElementById('backspace').addEventListener('click', removeLastNumber);
 
