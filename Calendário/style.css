@@ -77,3 +77,9 @@ body * {
     rgba(255,255,255,5%) 100%), #4f4cb0;
     transition: 0.3s;
 }
+
+.today {
+    background: linear-gradient(180deg, rgba(0,0,0,15%) 0%,
+    rgba(255,255,255,5%) 100%), #4f4cb0;
+    transition: 1s;
+}
