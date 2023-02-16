@@ -2,48 +2,50 @@
 <html lang="pt-BR">
 
 <head>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../scss/global.css">
 </head>
 
 <body>
-    <div id="calculator">
-        <div id="display">
-            <div id="last-calc"></div>
-            <div id="result">
-                <span>=</span>
-                <span id="displayResult"></span>
+    <div id="appCalculator">
+        <div id="calculator">
+            <div id="display">
+                <div id="last-calc"></div>
+                <div id="result">
+                    <span>=</span>
+                    <span id="displayResult"></span>
+                </div>
             </div>
-        </div>
-        <div id="calculatorKeyboard">
-            <button id="backspace"><<</button>
-            <button id="cleanCalc">C</button>
-            <button id="operatorModuleCalc">%</button>
-            <button id="operatorDivision" class="tertiary">/</button>
-            <button id="key7">7</button>
-            <button id="key8">8</button>
-            <button id="key9">9</button>
-            <button id="operatorMultiplier" class="tertiary">*</button>
-            <button id="key4">4</button>
-            <button id="key5">5</button>
-            <button id="key6">6</button>
-            <button id="operatorMinus" class="tertiary">-</button>
-            <button id="key1">1</button>
-            <button id="key2">2</button>
-            <button id="key3">3</button>
-            <button id="operatorPlus" class="tertiary">+</button>
-            <button id="changeSignal">+/-</button>
-            <button id="key0">0</button>
-            <button id="decimal">,</button>
-            <button id="equal" class="quartiary">=</button>
+            <div id="calculatorKeyboard">
+                <button id="backspace">
+                    <<</button> <button id="cleanCalc">C
+                </button>
+                <button id="operatorModuleCalc">%</button>
+                <button id="operatorDivision" class="tertiary">/</button>
+                <button id="key7">7</button>
+                <button id="key8">8</button>
+                <button id="key9">9</button>
+                <button id="operatorMultiplier" class="tertiary">*</button>
+                <button id="key4">4</button>
+                <button id="key5">5</button>
+                <button id="key6">6</button>
+                <button id="operatorMinus" class="tertiary">-</button>
+                <button id="key1">1</button>
+                <button id="key2">2</button>
+                <button id="key3">3</button>
+                <button id="operatorPlus" class="tertiary">+</button>
+                <button id="changeSignal">+/-</button>
+                <button id="key0">0</button>
+                <button id="decimal">,</button>
+                <button id="equal" class="quartiary">=</button>
+            </div>
         </div>
     </div>
     <script src="scripts.js"></script>

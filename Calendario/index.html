@@ -4,33 +4,35 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../scss/global.css">
     <title>Calendário</title>
 </head>
 
 <body>
-    <div class="calendar">
-        <div class="month">
-            <div class="date">
-                <h1></h1>
-                <p></p>
+    <div id="appCalendar">
+        <div class="calendar">
+            <div class="month">
+                <div class="date">
+                    <h1></h1>
+                    <p></p>
+                </div>
             </div>
+            <div class="weekdays">
+                <div class="mon">mon</div>
+                <div class="tue">tue</div>
+                <div class="wed">wed</div>
+                <div class="thu">thu</div>
+                <div class="fri">fri</div>
+                <div class="sat">sat</div>
+                <div class="sun">sun</div>
+            </div>
+            <div class="days"></div>
         </div>
-        <div class="weekdays">
-            <div class="mon">mon</div>
-            <div class="tue">tue</div>
-            <div class="wed">wed</div>
-            <div class="thu">thu</div>
-            <div class="fri">fri</div>
-            <div class="sat">sat</div>
-            <div class="sun">sun</div>
-        </div>
-        <div class="days"></div>
     </div>
     <script src="scripts.js"></script>
 </body>

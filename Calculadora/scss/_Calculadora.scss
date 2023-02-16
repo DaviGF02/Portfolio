@@ -1,24 +1,8 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-body {
+#appCalculator {
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(180deg, #4f4cb0 0%, #4c4cb0 100%);
-
     display: grid;
     place-content: center;
-
-    * {
-        font-family: "Rubik";
-        letter-spacing: -0.02em;
-    }
-
     #calculator {
         width: 356px;
 

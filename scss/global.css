@@ -1,61 +1,90 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+h1 {
+  font-family: "Rubik", sans-serif;
+  line-height: 1.2;
+  font-weight: 700;
+  font-size: clamp(2.4rem, -3.4444rem + 5.7870vw, 3rem);;
 }
 
-body {
+h2 {
+  font-family: "Rubik", sans-serif;
+  line-height: 1.2;
+  font-weight: 700;
+  font-size: clamp(2rem, -3.4444rem + 5.7870vw, 2.4rem);;
+}
+
+h3 {
+  font-family: "Rubik", sans-serif;
+  line-height: 1.2;
+  font-weight: 700;
+  font-size: clamp(1.8rem, -3.4444rem + 5.7870vw, 2rem);;
+}
+
+h4 {
+  font-family: "Rubik", sans-serif;
+  line-height: 1.2;
+  font-weight: 700;
+  font-size: clamp(1.6rem, -3.4444rem + 5.7870vw, 1.8rem);;
+}
+
+h5 {
+  font-family: "Rubik", sans-serif;
+  line-height: 1.2;
+  font-weight: 700;
+  font-size: clamp(1.4rem, -3.4444rem + 5.7870vw, 1.6rem);;
+}
+
+p {
+  font-family: "Rubik", sans-serif;
+  line-height: 1.2;
+  font-weight: 400;
+  font-size: clamp(1.4rem, -3.4444rem + 5.7870vw, 1.6rem);;
+}
+
+#appCalculator {
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(180deg, #4f4cb0 0%, #4c4cb0 100%);
   display: grid;
   place-content: center;
 }
-body * {
-  font-family: "Rubik";
-  letter-spacing: -0.02em;
-}
-body #calculator {
+#appCalculator #calculator {
   width: 356px;
   background: #2d2a37;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 188px 52px rgba(0, 0, 0, 0.01), 0 120px 48px rgba(0, 0, 0, 0.04), 0 68px 41px rgba(0, 0, 0, 0.15), 0 30px 30px rgba(0, 0, 0, 0.26), 0 8px 17px rgba(0, 0, 0, 0.29), inset 0 6px 8px rgba(255, 255, 255, 0.1), inset 0 -4px 5px rgba(0, 0, 0, 0.22);
   border-radius: 48px;
 }
-body #calculator #display {
+#appCalculator #calculator #display {
   margin-top: 54px;
   padding-inline: 54px;
 }
-body #calculator #display #last-calc {
+#appCalculator #calculator #display #last-calc {
   text-align: right;
   font-size: 20px;
   line-height: 140%;
   color: #6b6b6b;
 }
-body #calculator #display #result {
+#appCalculator #calculator #display #result {
   margin-top: 8px;
   display: flex;
   justify-content: space-between;
 }
-body #calculator #display #result span {
+#appCalculator #calculator #display #result span {
   font-size: 36px;
   line-height: 140%;
   color: #ebebeb;
 }
-body #calculator #display #result #displayResult {
+#appCalculator #calculator #display #result #displayResult {
   overflow: hidden;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row-reverse;
 }
-body #calculator #calculatorKeyboard {
+#appCalculator #calculator #calculatorKeyboard {
   padding: 26px 32px 32px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 12px;
 }
-body #calculator #calculatorKeyboard button {
+#appCalculator #calculator #calculatorKeyboard button {
   border: 0;
   width: 64px;
   height: 64px;
@@ -67,41 +96,28 @@ body #calculator #calculatorKeyboard button {
   color: #ebebeb;
   cursor: pointer;
 }
-body #calculator #calculatorKeyboard button:hover {
+#appCalculator #calculator #calculatorKeyboard button:hover {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%), #4f4cb0;
   transition: 0.3s;
 }
-body #calculator #calculatorKeyboard .secondary {
+#appCalculator #calculator #calculatorKeyboard .secondary {
   color: #975dfa;
 }
-body #calculator #calculatorKeyboard .tertiary {
+#appCalculator #calculator #calculatorKeyboard .tertiary {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0.01%, rgba(255, 255, 255, 0.05) 100%), #2a2a78;
   box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01), 0px 7px 7px rgba(0, 0, 0, 0.04), 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.26), 0px 0px 2px rgba(0, 0, 0, 0.29), inset 0px 2px 3px rgba(255, 255, 255, 0.1);
 }
-body #calculator #calculatorKeyboard .quartiary {
+#appCalculator #calculator #calculatorKeyboard .quartiary {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%), #5a5ad9;
   box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01), 0px 7px 7px rgba(0, 0, 0, 0.04), 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.26), 0px 0px 2px rgba(0, 0, 0, 0.29), inset 0px 2px 3px rgba(255, 255, 255, 0.1);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
+#appCalendar {
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(180deg, #4f4cb0 0%, #4c4cb0 100%);
   display: flex;
 }
-body * {
-  font-family: "Rubik";
-  letter-spacing: -0.02em;
-}
-body .calendar {
+#appCalendar .calendar {
   margin: auto;
   width: 500px;
   background: #2d2a37;
@@ -109,7 +125,7 @@ body .calendar {
   border-radius: 48px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 188px 52px rgba(0, 0, 0, 0.01), 0 120px 48px rgba(0, 0, 0, 0.04), 0 68px 41px rgba(0, 0, 0, 0.15), 0 30px 30px rgba(0, 0, 0, 0.26), 0 8px 17px rgba(0, 0, 0, 0.29), inset 0 6px 8px rgba(255, 255, 255, 0.1), inset 0 -4px 5px rgba(0, 0, 0, 0.22);
 }
-body .calendar .month {
+#appCalendar .calendar .month {
   display: flex;
   justify-content: center;
   padding-top: 54px;
@@ -118,11 +134,11 @@ body .calendar .month {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 48px 48px 0 0;
 }
-body .calendar .weekdays {
+#appCalendar .calendar .weekdays {
   box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.2);
 }
-body .calendar .weekdays,
-body .calendar .days {
+#appCalendar .calendar .weekdays,
+#appCalendar .calendar .days {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   place-content: center;
@@ -131,17 +147,32 @@ body .calendar .days {
   padding: 16px 8px 16px 8px;
   gap: 12px;
 }
-body .calendar .days .numberDay {
+#appCalendar .calendar .days .numberDay {
   border-radius: 999px;
   padding: 16px 0px;
   box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01), 0px 7px 7px rgba(0, 0, 0, 0.04), 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.26), 0px 0px 2px rgba(0, 0, 0, 0.29), inset 0px 2px 3px rgba(255, 255, 255, 0.06);
 }
-body .calendar .days .numberDay:hover {
+#appCalendar .calendar .days .numberDay:hover {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%), #4f4cb0;
   transition: 0.3s;
 }
-
-.today {
+#appCalendar .today {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%), #4f4cb0;
   transition: 1s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Rubik", sans-serif;
+  letter-spacing: -0.02em;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(180deg, #4f4cb0 0%, #4c4cb0 100%);
 }/*# sourceMappingURL=global.css.map */
