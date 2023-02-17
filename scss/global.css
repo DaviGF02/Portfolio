@@ -48,7 +48,7 @@ p {
 }
 #appCalculator #calculator {
   width: 356px;
-  background: #2d2a37;
+  background: #2D2A37;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 188px 52px rgba(0, 0, 0, 0.01), 0 120px 48px rgba(0, 0, 0, 0.04), 0 68px 41px rgba(0, 0, 0, 0.15), 0 30px 30px rgba(0, 0, 0, 0.26), 0 8px 17px rgba(0, 0, 0, 0.29), inset 0 6px 8px rgba(255, 255, 255, 0.1), inset 0 -4px 5px rgba(0, 0, 0, 0.22);
   border-radius: 48px;
 }
@@ -60,7 +60,7 @@ p {
   text-align: right;
   font-size: 20px;
   line-height: 140%;
-  color: #6b6b6b;
+  color: #6B6B6B;
 }
 #appCalculator #calculator #display #result {
   margin-top: 8px;
@@ -70,7 +70,7 @@ p {
 #appCalculator #calculator #display #result span {
   font-size: 36px;
   line-height: 140%;
-  color: #ebebeb;
+  color: #E5E5E5;
 }
 #appCalculator #calculator #display #result #displayResult {
   overflow: hidden;
@@ -88,28 +88,25 @@ p {
   border: 0;
   width: 64px;
   height: 64px;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), #2d2a37;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), #2D2A37;
   box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01), 0px 7px 7px rgba(0, 0, 0, 0.04), 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.26), 0px 0px 2px rgba(0, 0, 0, 0.29), inset 0px 2px 3px rgba(255, 255, 255, 0.06);
   border-radius: 999px;
   font-size: 24px;
   line-height: 28px;
-  color: #ebebeb;
+  color: #E5E5E5;
   cursor: pointer;
 }
 #appCalculator #calculator #calculatorKeyboard button:hover {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%), #4f4cb0;
   transition: 0.3s;
 }
-#appCalculator #calculator #calculatorKeyboard .secondary {
-  color: #975dfa;
-}
 #appCalculator #calculator #calculatorKeyboard .tertiary {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0.01%, rgba(255, 255, 255, 0.05) 100%), #2a2a78;
-  box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01), 0px 7px 7px rgba(0, 0, 0, 0.04), 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.26), 0px 0px 2px rgba(0, 0, 0, 0.29), inset 0px 2px 3px rgba(255, 255, 255, 0.1);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), #2a2a78;
+  box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01), 0px 7px 7px rgba(0, 0, 0, 0.04), 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.26), 0px 0px 2px rgba(0, 0, 0, 0.29), inset 0px 2px 3px rgba(255, 255, 255, 0.06);
 }
 #appCalculator #calculator #calculatorKeyboard .quartiary {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%), #5a5ad9;
-  box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01), 0px 7px 7px rgba(0, 0, 0, 0.04), 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.26), 0px 0px 2px rgba(0, 0, 0, 0.29), inset 0px 2px 3px rgba(255, 255, 255, 0.1);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), #5a5ad9;
+  box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01), 0px 7px 7px rgba(0, 0, 0, 0.04), 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.26), 0px 0px 2px rgba(0, 0, 0, 0.29), inset 0px 2px 3px rgba(255, 255, 255, 0.06);
 }
 
 #appCalendar {
@@ -120,8 +117,8 @@ p {
 #appCalendar .calendar {
   margin: auto;
   width: 500px;
-  background: #2d2a37;
-  color: #ebebeb;
+  background: #2D2A37;
+  color: #E5E5E5;
   border-radius: 48px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25), 0 188px 52px rgba(0, 0, 0, 0.01), 0 120px 48px rgba(0, 0, 0, 0.04), 0 68px 41px rgba(0, 0, 0, 0.15), 0 30px 30px rgba(0, 0, 0, 0.26), 0 8px 17px rgba(0, 0, 0, 0.29), inset 0 6px 8px rgba(255, 255, 255, 0.1), inset 0 -4px 5px rgba(0, 0, 0, 0.22);
 }
