@@ -1,8 +1,8 @@
 #appCalendar {
     height: 100vh;
     width: 100vw;
-    display: flex;
-
+    display: grid;
+    place-content: center;
     .calendar {
         margin: auto;
         width: 500px;
