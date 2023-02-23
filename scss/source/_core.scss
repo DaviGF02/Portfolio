@@ -1,2 +1,11 @@
 @import "mixins";
 @import "variables";
+
+//import font awesome
+@import "./fontawesome/fontawesome";
+
+//icons
+@import "./fontawesome/solid";
+@import "./fontawesome/brands";
+@import "./fontawesome/regular";
+@import "./fontawesome/v4-shims";
