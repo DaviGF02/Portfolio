@@ -1,0 +1,14 @@
+$gutter: 5px;
+
+$containerWidth: 1520px;
+
+// Common breakpoints
+// @media ($aboveTablet) {}
+$aboveMobile: "min-width: 576px";
+$belowMobile: "max-width: 576px";
+$aboveTablet: "min-width: 768px";
+$bellowTablet: "max-width: 768px";
+$aboveDesktopSmall: "min-width: 992px";
+$aboveDesktopLarge: "min-width: 1200px";
+$bellowContainer: "max-width: #{$containerWidth}";
+$fa-font-path: "../webfonts";
