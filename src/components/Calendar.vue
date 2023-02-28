@@ -20,7 +20,7 @@
         </div>
     </div>
 </template>
-<script scoped>
+<script>
 // 'use strict'
 
 // const monthIndex = new Date().getMonth();

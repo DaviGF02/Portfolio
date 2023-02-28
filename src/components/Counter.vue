@@ -11,7 +11,7 @@
         </div>
     </div>
 </template>
-<script scoped>
+<script>
 // 'use strict'
 
 // let count = 0;

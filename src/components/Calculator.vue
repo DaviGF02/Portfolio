@@ -34,7 +34,7 @@
   </div>
 </template>
 
-<script setup>
+<script>
 // 'use strict';
 
 // const display = document.getElementById('displayResult');
