@@ -132,7 +132,6 @@
 // }
 // document.getElementById('decimal').addEventListener('click', insertDecimal);
 
-
 // const keyboardMap = {
 //     '0': 'key0',
 //     '1': 'key1',
@@ -167,78 +166,78 @@
 
 <style lang="scss" scoped>
 #appCalculator {
-    height: 100vh;
-    display: grid;
-    place-content: center;
-    #calculator {
-        width: 356px;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  #calculator {
+    width: 356px;
 
-        background: $bgDark;
-        @include bigShadow;
-        border-radius: 48px;
+    background: $bgDark;
+    @include bigShadow;
+    border-radius: 48px;
 
-        #display {
-            margin-top: 54px;
-            padding-inline: 54px;
+    #display {
+      margin-top: 54px;
+      padding-inline: 54px;
 
-            #last-calc {
-                text-align: right;
-                font-size: 20px;
-                line-height: 140%;
-                color: $darkGray;
-            }
+      #last-calc {
+        text-align: right;
+        font-size: 20px;
+        line-height: 140%;
+        color: $darkGray;
+      }
 
-            #result {
-                margin-top: 8px;
-                display: flex;
-                justify-content: space-between;
+      #result {
+        margin-top: 8px;
+        display: flex;
+        justify-content: space-between;
 
-                span {
-                    font-size: 36px;
-                    line-height: 140%;
-                    color: $envelopeWhite;
-                }
-
-                #displayResult {
-                    overflow: hidden;
-                    display: flex;
-                    flex-wrap: nowrap;
-                    flex-direction: row-reverse;
-                }
-            }
+        span {
+          font-size: 36px;
+          line-height: 140%;
+          color: $envelopeWhite;
         }
 
-        #calculatorKeyboard {
-            padding: 26px 32px 32px;
-
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 12px;
-
-            button {
-                border: 0;
-                width: 64px;
-                height: 64px;
-                background: $darkGrayButton;
-                @include buttonShadow;
-                border-radius: 999px;
-                font-size: 24px;
-                line-height: 28px;
-                color: $envelopeWhite;
-                cursor: pointer;
-                @include commonHoverBlue;
-            }
-
-            .tertiary {
-                background:$darkBlueButton;
-                @include buttonShadow;
-            }
-
-            .quartiary {
-                background: $lightBlueButton;
-                @include buttonShadow;
-            }
+        #displayResult {
+          overflow: hidden;
+          display: flex;
+          flex-wrap: nowrap;
+          flex-direction: row-reverse;
         }
+      }
     }
+
+    #calculatorKeyboard {
+      padding: 26px 32px 32px;
+
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+
+      button {
+        border: 0;
+        width: 64px;
+        height: 64px;
+        background: $darkGrayButton;
+        @include buttonShadow;
+        border-radius: 999px;
+        font-size: 24px;
+        line-height: 28px;
+        color: $envelopeWhite;
+        cursor: pointer;
+        @include commonHoverBlue;
+      }
+
+      .tertiary {
+        background: $darkBlueButton;
+        @include buttonShadow;
+      }
+
+      .quartiary {
+        background: $lightBlueButton;
+        @include buttonShadow;
+      }
+    }
+  }
 }
 </style>

@@ -1,8 +1,8 @@
 //main colors
-$bgDark: #2D2A37;
-$bgDarker: #130E25;
-$bgLight: #F0F0F0;
-$bgLighter: #FFFFFF;
+$bgDark: #2d2a37;
+$bgDarker: #130e25;
+$bgLight: #f0f0f0;
+$bgLighter: #ffffff;
 $bgLightBlue: #4c4cb0;
 $bgLighterBlue: #4f4cb0;
 $bgDarkBlue: #2a2a78;
@@ -10,43 +10,44 @@ $bgMain: linear-gradient(180deg, $bgLighterBlue 0%, $bgLightBlue 100%);
 
 // Brand Colors
 $brandColor1: #f6f6f6;
-$brandColor2: #FF792D;
-$brandColor3: #F2CF4F;
-$brandColor4: #7379FF;
+$brandColor2: #ff792d;
+$brandColor3: #f2cf4f;
+$brandColor4: #7379ff;
 // $brandColorDarker: #022550;
 $brandColorDarker: #828282;
-$brandColorDark: #6A6774;
-$brandColorLight: #F7F6F8;
-$brandColorLighter: #FFFFFF;
+$brandColorDark: #6a6774;
+$brandColorLight: #f7f6f8;
+$brandColorLighter: #ffffff;
 
 //standard colors
-$candleLight: #FFD117;
+$candleLight: #ffd117;
 $gray: #828282;
-$darkGray: #6B6B6B;
-$thunderbird: #CE181E;
+$darkGray: #6b6b6b;
+$thunderbird: #ce181e;
 $emperor: #555555;
 $alto: #d7d7d7;
 $black: #000000;
 $white: #ffffff;
-$chambray: #3B5998;
+$chambray: #3b5998;
 $purple: #913684;
 $lighterPurple: #5a5ad9;
-$tango: #ED6F26;
-$darkPrimary: #9C060B;
-$limeade: #3A8600;
-$indianRed: #CD5C5C;
-$pictonBlue: #26C1EB;
-$envelopeWhite: #E5E5E5;
-$wolfie: #F9F9F9;
-$corn: #DEB201;
-
+$tango: #ed6f26;
+$darkPrimary: #9c060b;
+$limeade: #3a8600;
+$indianRed: #cd5c5c;
+$pictonBlue: #26c1eb;
+$envelopeWhite: #e5e5e5;
+$wolfie: #f9f9f9;
+$corn: #deb201;
 
 // message validate colors
-$successColor: #3A8600;
-$errorColor: #9C060B;
-$successGreen: #48A700;
+$successColor: #3a8600;
+$errorColor: #9c060b;
+$successGreen: #48a700;
 
 //buttonColors
 $darkGrayButton: linear-gradient(180deg, rgba($black, 0.05) 0%, rgba($white, 0.05) 100%), $bgDark;
-$darkBlueButton: linear-gradient(180deg, rgba($black, 0.05) 0%, rgba($white, 0.05) 100%), $bgDarkBlue;
-$lightBlueButton: linear-gradient(180deg, rgba($black, 0.05) 0%, rgba($white, 0.05) 100%), $lighterPurple;
+$darkBlueButton: linear-gradient(180deg, rgba($black, 0.05) 0%, rgba($white, 0.05) 100%),
+  $bgDarkBlue;
+$lightBlueButton: linear-gradient(180deg, rgba($black, 0.05) 0%, rgba($white, 0.05) 100%),
+  $lighterPurple;
