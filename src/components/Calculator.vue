@@ -2,6 +2,7 @@
   <div id="appCalculator">
     <div id="calculator">
       <div id="display">
+        <i class="fa-solid fa-user"></i>
         <div id="last-calc"></div>
         <div id="result">
           <span>=</span>
