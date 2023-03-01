@@ -9,26 +9,26 @@
         </div>
       </div>
       <div id="calculatorKeyboard">
-        <button>--</button>
+        <button><i class="fa-solid fa-delete-left"></i></button>
         <button>C</button>
-        <button>%</button>
-        <button class="tertiary">/</button>
+        <button><i class="fa-solid fa-percent"></i></button>
+        <button class="tertiary"><i class="fa-solid fa-divide"></i></button>
         <button>7</button>
         <button>8</button>
         <button>9</button>
-        <button class="tertiary">*</button>
+        <button class="tertiary"><i class="fa-solid fa-xmark"></i></button>
         <button>4</button>
         <button>5</button>
         <button>6</button>
-        <button class="tertiary">-</button>
+        <button class="tertiary"><i class="fa-solid fa-minus"></i></button>
         <button>1</button>
         <button>2</button>
         <button>3</button>
-        <button class="tertiary">+</button>
-        <button>+/-</button>
+        <button class="tertiary"><i class="fa-solid fa-plus"></i></button>
+        <button><i class="fa-solid fa-plus-minus"></i></button>
         <button>0</button>
         <button>,</button>
-        <button class="quartiary">=</button>
+        <button class="quartiary"><i class="fa-solid fa-equals"></i></button>
       </div>
     </div>
   </div>
