@@ -4,7 +4,7 @@
       <div id="display">
         <div id="last-calc"></div>
         <div id="result">
-          <span>=</span>
+          <span><i class="fa-solid fa-equals"></i></span>
           <span id="displayResult"></span>
         </div>
       </div>
