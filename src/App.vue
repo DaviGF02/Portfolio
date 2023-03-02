@@ -18,8 +18,12 @@ import Counter from './components/Counter.vue'
   font-family: $fontFamily;
   letter-spacing: -0.02em;
 }
+:root {
+  font-size: 62.5%;
+}
 
 body {
   background: $bgMain;
+  font-size: 1.6rem;
 }
 </style>

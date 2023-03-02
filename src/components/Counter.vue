@@ -2,11 +2,19 @@
   <div id="appCounter">
     <div id="counter">
       <span id="titleCounter">Contador</span>
-      <span id="count">0</span>
+      <div v-if="count < 0">
+        <span class="countMinus" id="count">{{ count }}</span>
+      </div>
+      <div v-else-if="count > 0">
+        <span class="countPlus" id="count">{{ count }}</span>
+      </div>
+      <div v-else>
+        <span id="count">{{ count }}</span>
+      </div>
       <div class="counterButtons">
-        <button class="btn decrease">Subtrair</button>
-        <button class="btn reset">Resetar</button>
-        <button class="btn increase">Somar</button>
+        <button @click="countMinus" class="btn decrease">Subtrair</button>
+        <button @click="countReset" class="btn reset">Resetar</button>
+        <button @click="countPlus" class="btn increase">Somar</button>
       </div>
     </div>
   </div>
@@ -15,6 +23,25 @@
 <script>
 export default {
   name: 'Counter',
+  data () {
+    return {
+      count : 0,
+    }
+  },
+
+  methods: {
+    countPlus () {
+      this.count++;
+    },
+
+    countMinus () {
+      this.count--;
+    },
+
+    countReset () {
+      this.count = 0;
+    }
+  }
 }
 </script>
 
@@ -55,6 +82,13 @@ export default {
         @include regularText4;
         @include commonHoverBlue;
       }
+    }
+
+    .countPlus{
+      color: $limeade;
+    }
+    .countMinus{
+      color: $errorColor;
     }
   }
 }

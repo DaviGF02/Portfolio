@@ -58,7 +58,7 @@ export default {
 
       #last-calc {
         text-align: right;
-        font-size: 20px;
+        font-size: 2.0rem;
         line-height: 140%;
         color: $darkGray;
       }
@@ -69,7 +69,7 @@ export default {
         justify-content: space-between;
 
         span {
-          font-size: 36px;
+          font-size: 3.6rem;
           line-height: 140%;
           color: $envelopeWhite;
         }
@@ -97,7 +97,7 @@ export default {
         background: $darkGrayButton;
         @include buttonShadow;
         border-radius: 999px;
-        font-size: 24px;
+        font-size: 2.4rem;
         line-height: 28px;
         color: $envelopeWhite;
         cursor: pointer;
