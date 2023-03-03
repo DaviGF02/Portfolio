@@ -65,7 +65,7 @@ export default {
       @include heading1;
     }
     #count {
-      font-size: 6rem;
+      font-size: 8rem;
     }
 
     .counterButtons {
@@ -79,7 +79,7 @@ export default {
         color: $envelopeWhite;
         cursor: pointer;
         @include buttonShadow;
-        @include regularText4;
+        @include regularText2;
         @include commonHoverBlue;
       }
     }
