@@ -1,9 +1,11 @@
 <script setup>
 import Calculator from './components/Calculator.vue'
 import Counter from './components/Counter.vue'
+import Dashboard from './components/DashBoard.vue'
 </script>
 
 <template>
+  <Dashboard />
   <Calculator />
   <Counter />
 </template>
