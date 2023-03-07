@@ -23,23 +23,23 @@
 <script>
 export default {
   name: 'Counter',
-  data () {
+  data() {
     return {
-      count : 0,
+      count: 0
     }
   },
 
   methods: {
-    countPlus () {
-      this.count++;
+    countPlus() {
+      this.count++
     },
 
-    countMinus () {
-      this.count--;
+    countMinus() {
+      this.count--
     },
 
-    countReset () {
-      this.count = 0;
+    countReset() {
+      this.count = 0
     }
   }
 }
@@ -71,8 +71,8 @@ export default {
     .counterButtons {
       button {
         margin: 0.8rem;
-        width: 15.0rem;
-        height: 4.0rem;
+        width: 15rem;
+        height: 4rem;
         border: 0;
         background: $darkGrayButton;
         border-radius: 99.9rem;
@@ -84,10 +84,10 @@ export default {
       }
     }
 
-    .countPlus{
+    .countPlus {
       color: $limeade;
     }
-    .countMinus{
+    .countMinus {
       color: $errorColor;
     }
   }

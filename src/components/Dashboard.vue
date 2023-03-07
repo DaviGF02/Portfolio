@@ -1,20 +1,24 @@
 <template>
   <div id="appDashboard">
     <div class="dashboard">
-      <div class="box npsGeneral"></div>
+      <div class="box npsGeneral">
+        <div class="npsGeneral__title">NPS geral</div>
+        <div class="npsGeneral__content"><i class="fa-solid fa-face-laugh-beam"></i>Excelente!</div>
+        <div class="npsGeneral__score">NPS Score 75</div>
+      </div>
       <div class="box closedSales"></div>
       <div class="box monthlyGoal"></div>
       <div class="box salesByDayOfTheWeek"></div>
     </div>
   </div>
 </template>
-<script>
-</script>
+<script></script>
 <style lang="scss" scoped>
 #appDashboard {
-    display: grid;
-    place-content: center;
-    height: 100vh;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  color: $envelopeWhite;
 
   .dashboard {
     display: grid;

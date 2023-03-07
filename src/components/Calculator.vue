@@ -36,7 +36,7 @@
 
 <script>
 export default {
-  name: 'Calculator',
+  name: 'Calculator'
 }
 </script>
 
@@ -58,7 +58,7 @@ export default {
 
       #last-calc {
         text-align: right;
-        font-size: 2.0rem;
+        font-size: 2rem;
         line-height: 140%;
         color: $darkGray;
       }

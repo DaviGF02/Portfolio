@@ -6,7 +6,8 @@
 @import 'functions';
 @import 'variables';
 
-:root, :host {
+:root,
+:host {
   --#{$fa-css-prefix}-style-family-brands: 'Font Awesome 6 Brands';
   --#{$fa-css-prefix}-font-brands: normal 400 1em/1 'Font Awesome 6 Brands';
 }
@@ -26,5 +27,7 @@
 }
 
 @each $name, $icon in $fa-brand-icons {
-  .#{$fa-css-prefix}-#{$name}:before { content: unquote("\"#{ $icon }\""); }
+  .#{$fa-css-prefix}-#{$name}:before {
+    content: unquote('"#{ $icon }"');
+  }
 }
