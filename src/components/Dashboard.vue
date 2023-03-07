@@ -9,12 +9,22 @@
       <div class="box closedSales">
         <div class="title">Vendas fechadas</div>
         <div class="closedSales__content"></div>
-        <div class="closedSales__goal"></div>
+        <div class="closedSales__goal">
+          <div class="closedSales__expected"><i class="fa-solid fa-circle"></i> Esperado 100</div>
+          <div class="closedSales__reached"><i class="fa-solid fa-circle"></i> Alcançado 70</div>
+        </div>
       </div>
       <div class="box monthlyGoal">
         <div class="title">Meta mensal</div>
         <div class="monthlyGoal__content"></div>
-        <div class="monthlyGoal__goal"></div>
+        <div class="monthlyGoal__goal">
+          <div class="monthlyGoal__expected">
+            <i class="fa-solid fa-circle"></i> Esperado R$ 70K
+          </div>
+          <div class="monthlyGoal__reached">
+            <i class="fa-solid fa-circle"></i> Alcançado R$ 63K
+          </div>
+        </div>
       </div>
       <div class="box salesByDayOfTheWeek"></div>
     </div>
@@ -55,7 +65,6 @@
     .npsGeneral {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
 
       .npsGeneral__content {
@@ -77,6 +86,52 @@
           -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
           /* Terceiro passo: apagar o texto, deixando apenas o fundo atrás dele */
           -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+
+    .closedSales {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .closedSales__goal {
+        display: flex;
+        .closedSales__expected {
+          padding: 0 2rem 0 0;
+          .fa-circle {
+            color: $emperor;
+          }
+        }
+        .closedSales__reached {
+          .fa-circle {
+            background-image: linear-gradient(135deg, $bgLighterBlue 0%, $bgDarkBlue 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+    }
+
+    .monthlyGoal {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .monthlyGoal__goal {
+        display: flex;
+        .monthlyGoal__expected {
+          padding: 0 2rem 0 0;
+          .fa-circle {
+            color: $emperor;
+          }
+        }
+        .monthlyGoal__reached {
+          .fa-circle {
+            background-image: linear-gradient(135deg, $lightSuccessGreen 0%, $successColor 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
         }
       }
     }
