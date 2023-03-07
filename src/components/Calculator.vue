@@ -46,15 +46,15 @@ export default {
   display: grid;
   place-content: center;
   #calculator {
-    width: 356px;
+    width: 35.6rem;
 
     background: $bgDark;
     @include bigShadow;
-    border-radius: 48px;
+    border-radius: 4.8rem;
 
     #display {
-      margin-top: 54px;
-      padding-inline: 54px;
+      margin-top: 5.4rem;
+      padding-inline: 5.4rem;
 
       #last-calc {
         text-align: right;
@@ -64,7 +64,7 @@ export default {
       }
 
       #result {
-        margin-top: 8px;
+        margin-top: 0.8rem;
         display: flex;
         justify-content: space-between;
 
@@ -84,21 +84,21 @@ export default {
     }
 
     #calculatorKeyboard {
-      padding: 26px 32px 32px;
+      padding: 2.6rem 3.2rem 3.2rem;
 
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
+      gap: 1.2rem;
 
       button {
         border: 0;
-        width: 64px;
-        height: 64px;
+        width: 6.4rem;
+        height: 6.4rem;
         background: $darkGrayButton;
         @include buttonShadow;
-        border-radius: 999px;
+        border-radius: 99.9rem;
         font-size: 2.4rem;
-        line-height: 28px;
+        line-height: 2.8rem;
         color: $envelopeWhite;
         cursor: pointer;
         @include commonHoverBlue;

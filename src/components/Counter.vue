@@ -55,8 +55,8 @@ export default {
     background: $bgDark;
     color: $white;
     @include bigShadow;
-    border-radius: 48px;
-    padding: 48px;
+    border-radius: 4.8rem;
+    padding: 4.8rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,12 +70,12 @@ export default {
 
     .counterButtons {
       button {
-        margin: 8px;
-        width: 150px;
-        height: 40px;
+        margin: 0.8rem;
+        width: 15.0rem;
+        height: 4.0rem;
         border: 0;
         background: $darkGrayButton;
-        border-radius: 999px;
+        border-radius: 99.9rem;
         color: $envelopeWhite;
         cursor: pointer;
         @include buttonShadow;
