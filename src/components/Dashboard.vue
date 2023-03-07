@@ -2,12 +2,20 @@
   <div id="appDashboard">
     <div class="dashboard">
       <div class="box npsGeneral">
-        <div class="npsGeneral__title">NPS geral</div>
+        <div class="title">NPS geral</div>
         <div class="npsGeneral__content"><i class="fa-solid fa-face-laugh-beam"></i>Excelente!</div>
         <div class="npsGeneral__score">NPS Score 75</div>
       </div>
-      <div class="box closedSales"></div>
-      <div class="box monthlyGoal"></div>
+      <div class="box closedSales">
+        <div class="title">Vendas fechadas</div>
+        <div class="closedSales__content"></div>
+        <div class="closedSales__goal"></div>
+      </div>
+      <div class="box monthlyGoal">
+        <div class="title">Meta mensal</div>
+        <div class="monthlyGoal__content"></div>
+        <div class="monthlyGoal__goal"></div>
+      </div>
       <div class="box salesByDayOfTheWeek"></div>
     </div>
   </div>
@@ -37,6 +45,39 @@
 
       &:nth-child(4) {
         grid-column: 1/4;
+      }
+    }
+
+    .title {
+      font-weight: $semiBold;
+      font-size: 2.4rem;
+    }
+    .npsGeneral {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .npsGeneral__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 7.65rem 0;
+        color: $lightSuccessGreen;
+        .fa-face-laugh-beam {
+          padding: 0 0 1.6rem 0;
+          font-size: 5.4rem;
+          width: 5.4rem;
+          //colocar degrade na fonte/ icone
+
+          /* Primeiro passo: definir um degradê como fundo */
+          background-image: linear-gradient(180deg, $lightSuccessGreen 0%, $successGreen 100%);
+          /* Segundo passo: apagar do fundo tudo que não estiver imediatamente atrás de texto */
+          background-clip: text;
+          -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
+          /* Terceiro passo: apagar o texto, deixando apenas o fundo atrás dele */
+          -webkit-text-fill-color: transparent;
+        }
       }
     }
   }

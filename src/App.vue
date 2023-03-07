@@ -18,7 +18,6 @@ import Dashboard from './components/DashBoard.vue'
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: $fontFamily;
-  letter-spacing: -0.02em;
 }
 :root {
   font-size: 62.5%;
