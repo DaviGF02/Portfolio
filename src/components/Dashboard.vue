@@ -8,7 +8,29 @@
       </div>
       <div class="box closedSales">
         <div class="title">Vendas fechadas</div>
-        <div class="closedSales__content"></div>
+        <div class="closedSales__content">
+          <svg view-box="0 0 232 232" style="--percentage: 70">
+            <circle cx="50%" cy="50%" r="78.5" opacity="0.1" stroke="#555555" />
+            <circle cx="50%" cy="50%" r="78.5" stroke="url(#circleClosedSales)" />
+            <defs>
+              <linearGradient
+                id="circleClosedSales"
+                x1="-9"
+                y1="82"
+                x2="145"
+                y2="178"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#4c4cb0" />
+                <stop offset="1" stop-color="#2a2a78" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="closedSales__percent">
+            <h3>70%</h3>
+            <p>alcançada</p>
+          </div>
+        </div>
         <div class="closedSales__goal">
           <div class="closedSales__expected"><i class="fa-solid fa-circle"></i> Esperado 100</div>
           <div class="closedSales__reached"><i class="fa-solid fa-circle"></i> Alcançado 70</div>
@@ -16,7 +38,29 @@
       </div>
       <div class="box monthlyGoal">
         <div class="title">Meta mensal</div>
-        <div class="monthlyGoal__content"></div>
+        <div class="monthlyGoal__content">
+          <svg view-box="0 0 232 232" style="--percentage: 90">
+            <circle cx="50%" cy="50%" r="78.5" opacity="0.1" stroke="#555555" />
+            <circle cx="50%" cy="50%" r="78.5" stroke="url(#circleMonthlyGoal)" />
+            <defs>
+              <linearGradient
+                id="circleMonthlyGoal"
+                x1="-9"
+                y1="82"
+                x2="145"
+                y2="178"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#92F249" />
+                <stop offset="1" stop-color="#3a8600" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="monthlyGoal__percent">
+            <h3>90%</h3>
+            <p>alcançada</p>
+          </div>
+        </div>
         <div class="monthlyGoal__goal">
           <div class="monthlyGoal__expected">
             <i class="fa-solid fa-circle"></i> Esperado R$ 70K
@@ -26,7 +70,22 @@
           </div>
         </div>
       </div>
-      <div class="box salesByDayOfTheWeek"></div>
+      <div class="box salesByDayOfTheWeek">
+        <div class="title">Vendas por dia da semana</div>
+        <div class="salesByDayOfTheWeek__content">
+          <div class="bestAndWorstDay">
+            <div class="bestDay">
+              <span>Dia com mais vendas</span>
+              quarta-feira
+            </div>
+            <div class="worstDay">
+              <span>Dia com menos vendas</span>
+              domingo
+            </div>
+          </div>
+          <div class="salesByDayOfTheWeek__graphic"></div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -90,10 +149,61 @@
       }
     }
 
+    svg {
+      --percentage: 0;
+      width: 19.7rem;
+      height: 19.7rem;
+      transform: rotate(-90deg);
+      circle {
+        //2 * pi * r(raio do circulo)
+        //criar variavel pra dar responsividade para o circulo
+        --circleSize: 493;
+        stroke-dasharray: var(--circleSize);
+        stroke-dashoffset: var(--circleSize);
+
+        stroke-width: 30;
+        fill: none;
+
+        &:nth-child(1) {
+          stroke-dashoffset: 0;
+        }
+
+        &:nth-child(2) {
+          //calc(stroke-dasharray - (stroke-dasharray * percentual do grafico)/ 100)
+          stroke-dashoffset: calc(var(--circleSize) - (var(--circleSize)* var(--percentage))/100);
+          animation: progress 2s ease-in-out backwards;
+          animation-delay: 1s;
+        }
+      }
+    }
+    @keyframes progress {
+      0% {
+        stroke-dasharray: var(--circleSize);
+        stroke-dashoffset: var(--circleSize);
+      }
+    }
     .closedSales {
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: space-between;
+
+      .closedSales__content {
+        display: grid;
+        place-content: center;
+        position: relative;
+        .closedSales__percent{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+
+          h3 {
+            font-size: 3.4rem;
+          }
+        }
+      }
       .closedSales__goal {
         display: flex;
         .closedSales__expected {
@@ -117,6 +227,23 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: space-between;
+      .monthlyGoal__content {
+        display: grid;
+        place-content: center;
+        position: relative;
+        .monthlyGoal__percent{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+
+          h3 {
+            font-size: 3.4rem;
+          }
+        }
+      }
       .monthlyGoal__goal {
         display: flex;
         .monthlyGoal__expected {
@@ -133,6 +260,14 @@
             -webkit-text-fill-color: transparent;
           }
         }
+      }
+    }
+    .salesByDayOfTheWeek {
+      display: grid;
+      gap: 3.2rem;
+      .salesByDayOfTheWeek__content {
+        display: flex;
+        gap: 3.2rem;
       }
     }
   }
