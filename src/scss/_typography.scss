@@ -3,10 +3,11 @@
 $fontFamily: 'Rubik', sans-serif;
 
 // Font weights
-$bold: 700;
-$semiBold: 600;
 $light: 300;
 $regular: 400;
+$bigRegular: 500;
+$semiBold: 600;
+$bold: 700;
 
 // Default rules for typography
 @mixin fontStandards {

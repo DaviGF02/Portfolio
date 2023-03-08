@@ -75,15 +75,44 @@
         <div class="salesByDayOfTheWeek__content">
           <div class="bestAndWorstDay">
             <div class="bestDay">
-              <span>Dia com mais vendas</span>
+              <span><i class="fa-solid fa-caret-up"></i> Dia com mais vendas</span>
               quarta-feira
             </div>
             <div class="worstDay">
-              <span>Dia com menos vendas</span>
+              <span><i class="fa-solid fa-caret-down"></i> Dia com menos vendas</span>
               domingo
             </div>
           </div>
-          <div class="salesByDayOfTheWeek__graphic"></div>
+          <div class="salesByDayOfTheWeek__graphic">
+            <div class="graphic__wrapper">
+              <div class="graphic__bar" style="--height: 3.9rem"></div>
+              <span>dom</span>
+            </div>
+            <div class="graphic__wrapper">
+              <div class="graphic__bar" style="--height: 11.5rem"></div>
+              <span>seg</span>
+            </div>
+            <div class="graphic__wrapper">
+              <div class="graphic__bar" style="--height: 7.6rem"></div>
+              <span>ter</span>
+            </div>
+            <div class="graphic__wrapper">
+              <div class="graphic__bar" style="--height: 15.9rem"></div>
+              <span>qua</span>
+            </div>
+            <div class="graphic__wrapper">
+              <div class="graphic__bar" style="--height: 12.9rem"></div>
+              <span>qui</span>
+            </div>
+            <div class="graphic__wrapper">
+              <div class="graphic__bar" style="--height: 12rem"></div>
+              <span>sex</span>
+            </div>
+            <div class="graphic__wrapper">
+              <div class="graphic__bar" style="--height: 6.9rem"></div>
+              <span>sab</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -102,7 +131,7 @@
     grid-template-columns: max-content max-content max-content;
     column-gap: 3.2rem;
     row-gap: 5.9rem;
-    padding: 11.2rem 12.3rem;
+    padding: 8rem 8rem;
     background: $bgDark;
     border-radius: 4.8rem;
     @include bigShadow;
@@ -170,7 +199,9 @@
 
         &:nth-child(2) {
           //calc(stroke-dasharray - (stroke-dasharray * percentual do grafico)/ 100)
-          stroke-dashoffset: calc(var(--circleSize) - (var(--circleSize)* var(--percentage))/100);
+          stroke-dashoffset: calc(
+            var(--circleSize) - (var(--circleSize) * var(--percentage)) / 100
+          );
           animation: progress 2s ease-in-out backwards;
           animation-delay: 1s;
         }
@@ -192,7 +223,7 @@
         display: grid;
         place-content: center;
         position: relative;
-        .closedSales__percent{
+        .closedSales__percent {
           position: absolute;
           top: 50%;
           left: 50%;
@@ -232,7 +263,7 @@
         display: grid;
         place-content: center;
         position: relative;
-        .monthlyGoal__percent{
+        .monthlyGoal__percent {
           position: absolute;
           top: 50%;
           left: 50%;
@@ -268,6 +299,86 @@
       .salesByDayOfTheWeek__content {
         display: flex;
         gap: 3.2rem;
+        justify-content: space-between;
+        .bestAndWorstDay {
+          display: grid;
+          gap: 3.2rem;
+          .bestDay {
+            display: grid;
+            gap: 0.8rem;
+            font-weight: $bigRegular;
+            font-size: 2.4rem;
+            .fa-caret-up {
+              font-size: 2rem;
+              background-image: linear-gradient(180deg, $lightSuccessGreen 0%, $successGreen 100%);
+              background-clip: text;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              position: relative;
+              top: 0.5rem;
+            }
+            span {
+              font-size: 1.4rem;
+            }
+          }
+          .worstDay {
+            display: grid;
+            gap: 0.8rem;
+            font-weight: $bigRegular;
+            font-size: 2.4rem;
+            .fa-caret-down {
+              font-size: 2rem;
+              background-image: linear-gradient(180deg, $thunderbird 0%, $indianRed 100%);
+              background-clip: text;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+            span {
+              font-size: 1.4rem;
+            }
+          }
+        }
+        .salesByDayOfTheWeek__graphic {
+          display: flex;
+          gap: 5.9rem;
+          align-items: flex-end;
+          position: relative;
+
+          &::before {
+            content: '';
+            display: block;
+            height: 0.3rem;
+            width: 100%;
+            background: $emperor;
+            border-radius: 99.9rem;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 0;
+          }
+
+          @keyframes barsAnimation {
+            0% {
+              height: 0;
+            }
+          }
+          .graphic__wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            z-index: 1;
+            .graphic__bar {
+              width: 1.5rem;
+              height: var(--height);
+              background: linear-gradient(180deg, $envelopeWhite 0%, $pictonBlue 100%);
+              border-radius: 99.9rem;
+              animation: barsAnimation 2s backwards;
+              animation-delay: 1s;
+            }
+          }
+        }
       }
     }
   }
