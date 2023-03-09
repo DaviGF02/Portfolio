@@ -1,11 +1,10 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router';
-import NavMenu from './components/NavMenu.vue';
+import { RouterLink, RouterView } from 'vue-router'
+import NavMenu from './components/NavMenu.vue'
 </script>
 
 <template>
   <NavMenu />
-
   <RouterView />
 </template>
 
@@ -25,5 +24,7 @@ import NavMenu from './components/NavMenu.vue';
 body {
   background: $bgMain;
   font-size: 1.6rem;
+  width: 100vw;
+  height: 100vh;
 }
 </style>

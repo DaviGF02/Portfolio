@@ -1,7 +1,10 @@
 <template>
   <div class="menu">
     <i @click="showMenu" class="fa-solid fa-bars"></i>
-    <div class="menuLinks" :class="{ active: isActive}">
+    <div class="menuLinks" :class="{ active: isActive }">
+      <RouterLink @click="showMenu" class="navLink" to="/"
+        ><i class="fa-solid fa-house"></i> Início</RouterLink
+      >
       <RouterLink @click="showMenu" class="navLink" to="/Counter"
         ><i class="fa-solid fa-arrow-up-9-1"></i> Contador</RouterLink
       >
@@ -9,14 +12,14 @@
         ><i class="fa-solid fa-chart-line"></i> Dashboard</RouterLink
       >
     </div>
-    <div @click="showMenu" class="bg__menuLinks" :class="{bg__active: isActive}"></div>
+    <div @click="showMenu" class="bg__menuLinks" :class="{ bg__active: isActive }"></div>
   </div>
 </template>
 <script>
 export default {
   data() {
     return {
-      isActive: false,
+      isActive: false
     }
   },
   methods: {
@@ -53,13 +56,13 @@ export default {
     display: none;
   }
   .active {
-    animation: showMenuAnimation .5s;
+    animation: showMenuAnimation 0.5s;
     opacity: 1;
     display: flex;
     flex-direction: column;
   }
   .bg__active {
-    animation: showMenuAnimation .5s;
+    animation: showMenuAnimation 0.5s;
     opacity: 1;
     display: block;
   }
