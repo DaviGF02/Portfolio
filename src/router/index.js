@@ -22,11 +22,6 @@ const router = createRouter({
     //   component: () => import('../views/AboutView.vue')
     // }
     {
-      path: '/Calculator',
-      name: 'Calculator',
-      component: () => import('../components/Calculator.vue')
-    },
-    {
       path: '/Counter',
       name: 'Counter',
       component: () => import('../components/Counter.vue')

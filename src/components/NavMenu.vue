@@ -1,6 +1,5 @@
 <template>
     <nav>
-        <RouterLink class="navLink" to="/Calculator"><i class="fa-solid fa-calculator"></i> Calculadora</RouterLink>
         <RouterLink class="navLink" to="/Counter"><i class="fa-solid fa-arrow-up-9-1"></i> Contador</RouterLink>
         <RouterLink class="navLink" to="/Dashboard"><i class="fa-solid fa-chart-line"></i> Dashboard</RouterLink>
     </nav>
