@@ -17,17 +17,18 @@
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "pinia": "^2.0.32",
     "sass": "^1.58.3",
-    "three": "^0.150.1",
     "vue": "^3.2.47",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",
+    "@tresjs/core": "^1.8.1",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue/eslint-config-prettier": "^7.1.0",
     "eslint": "^8.34.0",
     "eslint-plugin-vue": "^9.9.0",
     "prettier": "^2.8.4",
+    "three": "^0.150.1",
     "vite": "^4.1.3"
   }
 }
