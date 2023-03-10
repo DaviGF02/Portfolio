@@ -5,9 +5,6 @@
       <RouterLink @click="showMenu" class="navLink" to="/"
         ><i class="fa-solid fa-house"></i> Início</RouterLink
       >
-      <RouterLink @click="showMenu" class="navLink" to="/Counter"
-        ><i class="fa-solid fa-arrow-up-9-1"></i> Contador</RouterLink
-      >
       <RouterLink @click="showMenu" class="navLink" to="/Dashboard"
         ><i class="fa-solid fa-chart-line"></i> Dashboard</RouterLink
       >

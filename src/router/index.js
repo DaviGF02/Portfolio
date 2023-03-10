@@ -28,11 +28,6 @@ const router = createRouter({
       component: () => import('../components/Home.vue')
     },
     {
-      path: '/Counter',
-      name: 'Counter',
-      component: () => import('../components/Counter.vue')
-    },
-    {
       path: '/Dashboard',
       name: 'Dashboard',
       component: () => import('../components/DashBoard.vue')
