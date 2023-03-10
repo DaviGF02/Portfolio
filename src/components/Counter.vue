@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: 'Counter',
+  name: 'app__counter',
   data() {
     return {
       count: 0

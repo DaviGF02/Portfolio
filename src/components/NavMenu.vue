@@ -41,7 +41,7 @@ export default {
     opacity: 0;
     z-index: 1001;
     .fa-house {
-        padding: 0 0 2rem 0;
+      padding: 0 0 2rem 0;
     }
     .navLink {
       color: $envelopeWhite;
