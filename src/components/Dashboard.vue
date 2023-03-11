@@ -83,42 +83,74 @@
               domingo
             </div>
           </div>
-          <div class="salesByDayOfTheWeek__graphic">
-            <div class="graphic__wrapper">
-              <div class="graphic__bar" style="--height: 3.9rem"></div>
-              <span>dom</span>
-            </div>
-            <div class="graphic__wrapper">
-              <div class="graphic__bar" style="--height: 11.5rem"></div>
-              <span>seg</span>
-            </div>
-            <div class="graphic__wrapper">
-              <div class="graphic__bar" style="--height: 7.6rem"></div>
-              <span>ter</span>
-            </div>
-            <div class="graphic__wrapper">
-              <div class="graphic__bar" style="--height: 15.9rem"></div>
-              <span>qua</span>
-            </div>
-            <div class="graphic__wrapper">
-              <div class="graphic__bar" style="--height: 12.9rem"></div>
-              <span>qui</span>
-            </div>
-            <div class="graphic__wrapper">
-              <div class="graphic__bar" style="--height: 12rem"></div>
-              <span>sex</span>
-            </div>
-            <div class="graphic__wrapper">
-              <div class="graphic__bar" style="--height: 6.9rem"></div>
-              <span>sab</span>
-            </div>
+          <div class="DashBoard__graphic">
+            <ModelChart
+            :typeGrahic="typeGrahic"
+            :dataGraphic="dataGraphic"
+            :optionsGraphic="optionsGraphic"
+            :pluginsGraphic="pluginsGraphic"
+            />
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
-<script></script>
+<script>
+import ModelChart from './ChartJs/ModelChart.vue'
+
+export default {
+  name: 'appDashBoard',
+  components: {
+    ModelChart
+  },
+  data() {
+    return {
+      
+      typeGrahic: 'bar',
+
+
+      dataGraphic: {
+        labels: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
+        datasets: [
+          {
+            label: 'My First Dataset',
+            data: [65, 59, 80, 81, 56, 55, 40],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(255, 159, 64, 0.2)',
+              'rgba(255, 205, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(153, 102, 255, 0.2)',
+              'rgba(201, 203, 207, 0.2)'
+            ],
+            borderColor: [
+              'rgb(255, 99, 132)',
+              'rgb(255, 159, 64)',
+              'rgb(255, 205, 86)',
+              'rgb(75, 192, 192)',
+              'rgb(54, 162, 235)',
+              'rgb(153, 102, 255)',
+              'rgb(201, 203, 207)'
+            ],
+            borderWidth: 1
+          }
+        ]
+      },
+
+      
+      optionsGraphic: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    }
+  }
+}
+</script>
 <style lang="scss" scoped>
 #appDashboard {
   display: grid;
@@ -338,46 +370,10 @@
             }
           }
         }
-        .salesByDayOfTheWeek__graphic {
-          display: flex;
-          gap: 5.9rem;
-          align-items: flex-end;
-          position: relative;
 
-          &::before {
-            content: '';
-            display: block;
-            height: 0.3rem;
-            width: 100%;
-            background: $emperor;
-            border-radius: 99.9rem;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 0;
-          }
-
-          @keyframes barsAnimation {
-            0% {
-              height: 0;
-            }
-          }
-          .graphic__wrapper {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 0.5rem;
-            z-index: 1;
-            .graphic__bar {
-              width: 1.5rem;
-              height: var(--height);
-              background: linear-gradient(180deg, $envelopeWhite 0%, $pictonBlue 100%);
-              border-radius: 99.9rem;
-              animation: barsAnimation 2s backwards;
-              animation-delay: 1s;
-            }
-          }
+        .DashBoard__graphic {
+          width: 600px;
+          height: 300px;
         }
       }
     }
