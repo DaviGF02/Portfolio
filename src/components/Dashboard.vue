@@ -165,7 +165,7 @@ export default {
     padding: 8rem 8rem;
     background: $bgDark;
     border-radius: 4.8rem;
-    margin: 100px 0 100px 0;
+    margin: 10rem 0 10rem 0;
     @include bigShadow;
     .box {
       padding: 2.9rem 4.8rem;
