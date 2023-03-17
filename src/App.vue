@@ -24,7 +24,5 @@ import NavMenu from './components/NavMenu.vue'
 body {
   background: $bgMain;
   font-size: 1.6rem;
-  width: 100vw;
-  height: 100vh;
 }
 </style>

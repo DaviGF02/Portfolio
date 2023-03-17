@@ -16,6 +16,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "chart.js": "^4.2.1",
+    "flag-icons": "^6.6.6",
     "pinia": "^2.0.32",
     "sass": "^1.58.3",
     "vue": "^3.2.47",

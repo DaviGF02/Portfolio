@@ -139,7 +139,7 @@ export default {
         ]
       },
 
-      
+
       optionsGraphic: {
         scales: {
           y: {
@@ -155,7 +155,6 @@ export default {
 #appDashboard {
   display: grid;
   place-content: center;
-  height: 100vh;
   color: $envelopeWhite;
 
   .dashboard {
@@ -166,6 +165,7 @@ export default {
     padding: 8rem 8rem;
     background: $bgDark;
     border-radius: 4.8rem;
+    margin: 100px 0 100px 0;
     @include bigShadow;
     .box {
       padding: 2.9rem 4.8rem;

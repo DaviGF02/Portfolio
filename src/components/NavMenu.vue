@@ -8,6 +8,9 @@
       <RouterLink @click="showMenu" class="navLink" to="/Dashboard"
         ><i class="fa-solid fa-chart-line"></i> Dashboard</RouterLink
       >
+      <RouterLink @click="showMenu" class="navLink" to="/Climate"
+        ><i class="fa-solid fa-cloud"></i> Clima</RouterLink
+      >
     </div>
     <div @click="showMenu" class="bg__menuLinks" :class="{ bg__active: isActive }"></div>
   </div>
