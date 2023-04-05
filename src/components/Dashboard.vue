@@ -85,10 +85,10 @@
           </div>
           <div class="DashBoard__graphic">
             <ModelChart
-            :typeGrahic="typeGrahic"
-            :dataGraphic="dataGraphic"
-            :optionsGraphic="optionsGraphic"
-            :pluginsGraphic="pluginsGraphic"
+              :typeGrahic="typeGrahic"
+              :dataGraphic="dataGraphic"
+              :optionsGraphic="optionsGraphic"
+              :pluginsGraphic="pluginsGraphic"
             />
           </div>
         </div>
@@ -106,9 +106,7 @@ export default {
   },
   data() {
     return {
-      
       typeGrahic: 'bar',
-
 
       dataGraphic: {
         labels: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
@@ -138,7 +136,6 @@ export default {
           }
         ]
       },
-
 
       optionsGraphic: {
         scales: {

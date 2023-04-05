@@ -6,24 +6,23 @@ import Chart from 'chart.js/auto'
 export default {
   name: 'appModelChart',
   props: {
-
     typeGrahic: {
       type: String,
       required: true
     },
     optionsGraphic: {
-      type: Object,
+      type: Object
     },
     dataGraphic: {
       type: Object,
       required: true
     },
     pluginsGraphic: {
-      type: Array,
+      type: Array
     }
   },
   mounted() {
-    const data = this.dataGraphic;
+    const data = this.dataGraphic
 
     const config = {
       type: this.typeGrahic,
