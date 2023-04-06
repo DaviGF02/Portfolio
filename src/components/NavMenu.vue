@@ -72,7 +72,7 @@ export default {
 .social {
   background: $bgDark;
   display: flex;
-  padding: 3rem 8rem 3rem 3rem;
+  padding: 3rem 8rem 0rem 3rem;
   a {
     width: 5rem;
     height: 5rem;
