@@ -10,6 +10,12 @@ My portfolio.
 
 See [Vite Configuration Reference](https://vitejs.dev/config/).
 
+## Node version
+
+```sh
+use 18.14.2 node version
+```
+
 ## Project Setup
 
 ```sh
